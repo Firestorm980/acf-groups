@@ -1,0 +1,131 @@
+.group {
+	
+}
+
+.group > table {
+	margin: 0 0 8px;
+}
+
+.group > table.acf-input-table > tbody > tr > td.field {
+	padding: 8px;
+}
+
+.group > table > thead > tr > th:last-child {
+	border-right: 0 none;
+}
+
+.group > table > tbody > tr > td.remove > a.acf-button-add,
+.group > table > tbody > tr > td.remove > a.acf-button-remove {
+	position: absolute;
+	
+	-webkit-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+	-moz-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+	-o-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s; 	
+	transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s; 
+	
+	visibility: hidden;
+	opacity: 0;
+}
+
+.group > table > tbody > tr > td.remove > a.acf-button-remove {
+	position: relative;
+}
+
+.group > table > tbody > tr:hover > td.remove > a.acf-button-add,
+.group > table > tbody > tr:hover > td.remove > a.acf-button-remove {
+
+	-webkit-transition-delay:0s;
+	-moz-transition-delay:0s;
+	-o-transition-delay:0s;
+	transition-delay:0s;
+	
+	visibility: visible;
+	opacity: 1;
+}
+
+.group.disabled > table > tbody > tr:hover > td.remove > a.acf-button-add {
+	visibility: hidden !important;
+}
+
+.group > table > thead > tr > th.order,
+.group > table > tbody > tr > td.order{
+	width: 16px !important;
+	text-align: center !important;
+	vertical-align: middle;
+	color: #aaa;
+	text-shadow: #fff 0 1px 0;
+	
+	cursor: move;
+}
+
+.group > table > tbody > tr > td.order {
+	border-right-color: #E1E1E1;
+	background: #f4f4f4;
+}
+
+.group > table > tbody > tr > td.remove {
+	background: #F9F9F9;
+}
+
+
+.group > table > thead > tr > th.order:hover,
+.group > table > tbody > tr > td.order:hover {
+	color: #666;
+}
+
+.group > table > thead > tr > th.remove,
+.group > table > tbody > tr > td.remove{
+	width: 16px !important;
+	vertical-align: middle;
+}
+
+.group tr.row-clone {
+	display: none !important;
+}
+
+.group > table > tbody > tr.ui-sortable-helper {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.group > table > tbody > tr.ui-sortable-placeholder {
+	visibility: visible !important;
+}
+
+.group > table > tbody > tr.ui-sortable-placeholder td {
+	border: 0 none !important;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.075);
+}
+
+
+/*
+*  Empty
+*/
+
+.group.empty table thead th {
+	border-bottom: 0 none;
+}
+
+.group.empty table.row_layout {
+	box-shadow: none;
+	border: 0 none;
+	margin: 0;
+}
+
+
+/*
+*  Conditiona Logic
+*/
+
+
+
+
+/*---------------------------------------------------------------------------------------------
+*
+*	Everythign Field fixes
+*
+*---------------------------------------------------------------------------------------------*/
+
+.media-item .describe .group > table > thead > tr > th {
+	width: auto;
+}
