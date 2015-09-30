@@ -79,35 +79,23 @@ endif;
 
 ?>
 <div class="group">
-<pre><?php // var_dump($field); ?></pre>
 	<table class="widefat acf-input-table row_layout">
-
 	<tbody>
 	<?php if( $field['value'] ): foreach( $field['value'] as $i => $value ): ?>
-		
 		<tr class="<?php echo ( (string) $i == 'acfcloneindex') ? "row-clone" : "row"; ?>">
-		
 			<td class="acf_input-wrap">
 				<table class="widefat acf_input">
-
-		
-		
-		<?php
-		
-		// loop though sub fields
-		
-		foreach( $field['sub_fields'] as $sub_field ): ?>
+		<?php foreach( $field['sub_fields'] as $sub_field ): ?>
 		
 			<?php
 			
-			// attributes (can appear on tr or td depending on $field['layout'])
+			// attributes 
 			$attributes = array(
 				'class'				=> "field sub_field field_type-{$sub_field['type']} field_key-{$sub_field['key']}",
 				'data-field_type'	=> $sub_field['type'],
 				'data-field_key'	=> $sub_field['key'],
 				'data-field_name'	=> $sub_field['name']
 			);
-			
 			
 			// required
 			if( $sub_field['required'] )
@@ -138,13 +126,9 @@ endif;
 							$sub_field['conditional_logic']['rules'] = array();
 						}
 						
-						//var_dump( $value );
-
 						// add value
 						$sub_field['value'] = isset($value[$sub_field['key']]) ? $value[$sub_field['key']] : '';
 							
-						//var_dump( $sub_field['value'] );
-
 						// add name
 						$sub_field['name'] = $field['name'] . '[' . $i . '][' . $sub_field['key'] . ']';
 						
@@ -158,9 +142,7 @@ endif;
 						</div>
 					</td>
 				</tr>
-			
 		<?php endforeach; ?>
-
 				</table>
 			</td>
 		</tr>
